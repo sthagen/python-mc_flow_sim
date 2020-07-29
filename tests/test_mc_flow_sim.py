@@ -42,6 +42,6 @@ def test_walk_nok_wrong_type_object():
 
 def test_walk_nok_wrong_type_int():
     bad = 42
-    message = r"object of type 'type' has no len\(\)"
+    message = r"object of type 'int' has no len\(\)"
     with pytest.raises(TypeError, match=message):
         mc.walk(bad)
