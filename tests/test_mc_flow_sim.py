@@ -5,11 +5,9 @@ import pytest  # type: ignore
 import mc_flow_sim.mc_flow_sim as mc
 
 
-def test_walk_ok_empty_string(capsys):
+def test_walk_ok_empty_string():
     empty = ''
     assert mc.walk(empty) is None
-    out, err = capsys.readouterr()
-    assert out.strip() == empty
 
 
 def test_walk_ok_empty_list():
