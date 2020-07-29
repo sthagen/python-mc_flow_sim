@@ -88,6 +88,13 @@ def test_walk_nok_wrong_type_float():
         mc.walk(bad)
 
 
+def test_walk_nok_wrong_type_complex():
+    bad = complex(1, -1)
+    message = r"object of type 'complex' has no len\(\)"
+    with pytest.raises(TypeError, match=message):
+        mc.walk(bad)
+
+
 def test_walk_nok_wrong_type_generator_expression():
     message = r"object of type 'generator' has no len\(\)"
     with pytest.raises(TypeError, match=message):
