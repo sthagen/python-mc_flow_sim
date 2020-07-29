@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+se#! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=line-too-long
 """Add logical documentation here later TODO."""
@@ -15,5 +15,5 @@ def main(argv=None):
     """Process ... TODO."""
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if "-v" in argv or "--verbose" in argv else False
-    DEBUG and print(f"No verbose mode implemented")
+    verbose and print(f"No verbose mode implemented")
     print(walk(argv))
