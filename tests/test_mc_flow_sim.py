@@ -35,4 +35,6 @@ def test_walk_nok_wrong_type_none():
 
 def test_walk_nok_wrong_type_object():
     bad = object
-    assert mc.walk(bad) is None
+    message = r"object of type 'type' has no len\(\)"
+    with pytest.raises(TypeError, match=message):
+        mc.walk(bad)
