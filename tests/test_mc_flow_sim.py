@@ -45,7 +45,9 @@ def test_walk_ok_string_list():
 
 def test_walk_ok_range():
     a_range = range(42)
-    assert mc.walk(a_range) in a_range
+    step = mc.walk(a_range)
+    assert step in a_range
+    assert isinstance(step, int)
 
 
 def test_walk_ok_int_dict():
