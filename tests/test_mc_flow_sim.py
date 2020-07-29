@@ -20,6 +20,11 @@ def test_walk_ok_empty_set():
     assert mc.walk(seq) is None
 
 
+def test_walk_ok_empty_tuple():
+    seq = tuple()
+    assert mc.walk(seq) is None
+
+
 def test_walk_ok_string():
     string = "abc"
     step = mc.walk(string)
