@@ -9,7 +9,7 @@ def test_main_ok_empty_string(capsys):
     empty = ''
     assert cli.main(empty) is None
     out, err = capsys.readouterr()
-    assert out.strip() == empty
+    assert out.strip() == str(None)
 
 
 def test_main_ok_empty_list(capsys):
