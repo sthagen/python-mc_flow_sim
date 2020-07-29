@@ -2,6 +2,6 @@
 Trial and error Monte Carlo Flow Simulation.
 
 ## Use Cases
-TBD
+* Simulate cycle time in ticket resolution
 
 Note: The default branch (with special menaing for github and gitlab users) has the name default 😉
