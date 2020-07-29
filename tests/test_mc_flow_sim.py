@@ -56,6 +56,12 @@ def test_walk_ok_function_list():
     assert mc.walk(seq) == the_same
 
 
+def test_walk_ok_iterator_list():
+    the_same = iter([1, 2, 3])
+    seq = [the_same, the_same, the_same]
+    assert mc.walk(seq) == the_same
+
+
 def test_walk_ok_int_dict():
     seq = {0: "a", 1: "b"}
     assert mc.walk(seq) in seq.values()
