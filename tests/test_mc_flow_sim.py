@@ -81,6 +81,13 @@ def test_walk_nok_wrong_type_int():
         mc.walk(bad)
 
 
+def test_walk_nok_wrong_type_float():
+    bad = 3.1415
+    message = r"object of type 'float' has no len\(\)"
+    with pytest.raises(TypeError, match=message):
+        mc.walk(bad)
+
+
 def test_walk_nok_wrong_type_generator_expression():
     message = r"object of type 'generator' has no len\(\)"
     with pytest.raises(TypeError, match=message):
