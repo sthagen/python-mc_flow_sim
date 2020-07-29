@@ -15,6 +15,11 @@ def test_walk_ok_empty_list():
     assert mc.walk(seq) is None
 
 
+def test_walk_ok_empty_set():
+    seq = {}
+    assert mc.walk(seq) is None
+
+
 def test_walk_ok_string():
     string = "abc"
     step = mc.walk(string)
