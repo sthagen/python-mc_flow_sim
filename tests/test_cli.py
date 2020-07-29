@@ -6,12 +6,15 @@ import mc_flow_sim.cli as cli
 
 
 def test_main_ok_string():
-    cli.main("abc")
+    string = "abc"
+    assert cli.main(string) is None
+    out, err = capsys.readouterr()
+    assert out.strip() in string
 
 
 def test_main_ok_string_list(capsys):
     the_same = "a"
     seq = [the_same, the_same, the_same]
-    cli.main(seq)
+    assert cli.main(seq) is None
     out, err = capsys.readouterr()
-    assert out == the_same
+    assert out.strip() == the_same
