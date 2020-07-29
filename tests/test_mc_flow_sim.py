@@ -26,3 +26,8 @@ def test_walk_ok_string_list():
     the_same = "a"
     seq = [the_same, the_same, the_same]
     assert mc.walk(seq) == the_same
+
+
+def test_walk_nok_wrong_type_none():
+    empty = ''
+    assert mc.walk(empty) is None
