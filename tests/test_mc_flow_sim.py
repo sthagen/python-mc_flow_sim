@@ -13,3 +13,8 @@ def test_walk_ok_empty_string():
 def test_walk_ok_empty_list():
     seq = []
     assert mc.walk(seq) is None
+
+
+def test_walk_ok_string():
+    string = "abc"
+    assert mc.walk(string) in string
