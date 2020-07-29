@@ -77,4 +77,4 @@ def test_walk_nok_wrong_type_int():
 def test_walk_nok_wrong_type_generator_expression():
     message = r"object of type 'int' has no len\(\)"
     with pytest.raises(TypeError, match=message):
-        mc.walk(range(1234))
+        mc.walk(n for n in range(1234))
