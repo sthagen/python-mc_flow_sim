@@ -31,3 +31,8 @@ def test_walk_ok_string_list():
 def test_walk_nok_wrong_type_none():
     bad = None
     assert mc.walk(bad) is None
+
+
+def test_walk_nok_wrong_type_object():
+    bad = object
+    assert mc.walk(bad) is None
