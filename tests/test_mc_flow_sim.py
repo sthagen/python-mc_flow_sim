@@ -43,6 +43,11 @@ def test_walk_ok_string_list():
     assert mc.walk(seq) == the_same
 
 
+def test_walk_ok_range():
+    a_range = range(42)
+    assert mc.walk(a_range) in a_range
+
+
 def test_walk_ok_int_dict():
     seq = {0: "a", 1: "b"}
     assert mc.walk(seq) in seq.values()
