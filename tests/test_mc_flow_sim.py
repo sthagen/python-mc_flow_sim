@@ -43,9 +43,11 @@ def test_walk_ok_string_list():
     assert mc.walk(seq) == the_same
 
 
-def test_walk_ok_string_dict():
-    seq = {"a": "b", "c": "d"}
-    assert mc.walk(seq) in seq
+def test_walk_nok_string_dict():
+    seq = {"a": "b"}
+    message = r"0"
+    with pytest.raises(KeyError, match=message):
+        mc.walk(seq)
 
 
 def test_walk_nok_wrong_type_none():
