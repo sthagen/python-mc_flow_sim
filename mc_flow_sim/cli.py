@@ -5,6 +5,8 @@
 import os
 import sys
 
+from mc_flow_sim.mc_flow_sim import walk
+
 DEBUG = os.getenv("MC_FLOW_SIM_DEBUG")
 
 
@@ -13,4 +15,5 @@ def main(argv=None):
     """Process ... TODO."""
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if "-v" in argv or "--verbose" in argv else False
-    DEBUG and print(f"Not yet implemented")
+    DEBUG and print(f"No verbose mode implemented")
+    print walk(argv)
