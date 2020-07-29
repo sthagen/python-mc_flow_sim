@@ -50,6 +50,12 @@ def test_walk_ok_range():
     assert isinstance(step, int)
 
 
+def test_walk_ok_function_list():
+    the_same = print
+    seq = [the_same, the_same, the_same]
+    assert mc.walk(seq) == the_same
+
+
 def test_walk_ok_int_dict():
     seq = {0: "a", 1: "b"}
     assert mc.walk(seq) in seq.values()
