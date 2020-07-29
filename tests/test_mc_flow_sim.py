@@ -29,5 +29,5 @@ def test_walk_ok_string_list():
 
 
 def test_walk_nok_wrong_type_none():
-    empty = ''
-    assert mc.walk(empty) is None
+    bad = None
+    assert mc.walk(bad) is None
