@@ -44,7 +44,7 @@ def test_walk_ok_string_list():
 
 
 def test_walk_ok_int_dict():
-    seq = {0: "a", 1:"b"}
+    seq = {0: "a", 1: "b"}
     assert mc.walk(seq) in seq
 
 
