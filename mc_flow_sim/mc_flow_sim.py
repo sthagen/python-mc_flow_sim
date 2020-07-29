@@ -6,4 +6,4 @@ import random
 
 def walk(targets):
     """Model documentation ... TODO."""
-    return random.choice(targets)
+    return random.choice(targets) if targets else None
