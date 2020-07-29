@@ -16,4 +16,4 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     verbose = True if "-v" in argv or "--verbose" in argv else False
     DEBUG and print(f"No verbose mode implemented")
-    print walk(argv)
+    print(walk(argv))
