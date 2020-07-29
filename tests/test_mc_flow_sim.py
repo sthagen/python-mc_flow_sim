@@ -18,3 +18,9 @@ def test_walk_ok_empty_list():
 def test_walk_ok_string():
     string = "abc"
     assert mc.walk(string) in string
+
+
+def test_walk_ok_string_list():
+    the_same = "a"
+    seq = [the_same, the_same, the_same]
+    assert mc.walk(seq) == the_same
