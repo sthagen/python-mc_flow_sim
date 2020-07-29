@@ -17,7 +17,9 @@ def test_walk_ok_empty_list():
 
 def test_walk_ok_string():
     string = "abc"
-    assert mc.walk(string) in string
+    step = mc.walk(string)
+    assert len(step) == 1
+    assert step in string
 
 
 def test_walk_ok_string_list():
