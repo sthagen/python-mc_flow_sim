@@ -102,6 +102,6 @@ def test_walk_nok_wrong_type_generator_expression():
 
 
 def test_walk_nok_wrong_type_function():
-    message = r"object of type 'function' has no len\(\)"
+    message = r"object of type 'builtin_function_or_method' has no len\(\)"
     with pytest.raises(TypeError, match=message):
         mc.walk(print)
