@@ -99,3 +99,9 @@ def test_walk_nok_wrong_type_generator_expression():
     message = r"object of type 'generator' has no len\(\)"
     with pytest.raises(TypeError, match=message):
         mc.walk(n for n in range(1234))
+
+
+def test_walk_nok_wrong_type_function():
+    message = r"object of type 'function' has no len\(\)"
+    with pytest.raises(TypeError, match=message):
+        mc.walk(print)
